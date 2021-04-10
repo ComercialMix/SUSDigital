@@ -5,14 +5,14 @@ import params from './params'
 
 export default props => {
     const {name, description, nearMines, exploded, qtdVagas} = props
-    
-        const styleField = [styles.field]
-        styleField.push(styles.regular)
-    
+        
         return(
-            <View style={styleField}>
-                <Text style={styles.label}>
-                {name}
+            <View style={styles.field}>
+                <Text style={styles.name}>
+                    {description}
+                </Text>
+                <Text style={styles.desc}>
+                    {description}
                 </Text>
             </View>
         )
@@ -20,19 +20,24 @@ export default props => {
     
     const styles = StyleSheet.create({
         field: {
-            height: params.blockSize,
-            width: params.blockSize,
-            borderTopWidth: 3,
-            borderRadius: 10,
+            width: 150,
+            height: 150,
+            borderTop: 2,
+            borderTopWidth: 4,
+            borderRadius: 20,
             marginTop: 20,
-        },
-        regular: {
             backgroundColor: '#f0f0f0',
-            borderTopColor: '#000',
+            borderTopColor: '#606060',
         },
-        label: {
+        name: {
             fontWeight: 'bold',
-            fontSize: params.fontSize,
+            fontSize: 15,
+            backgroundColor: 'red',
+            paddingHorizontal: 15,
+    
+        },
+        desc: {
+            fontSize: 12,
     
         },
     })

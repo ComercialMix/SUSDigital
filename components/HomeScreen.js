@@ -20,7 +20,7 @@ function HomeScreen({ navigation }) {
       </View>
 
       <View style={styles.body}>
-        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'} description={'Descrição da Especialidade'}/> 
         <Espec name={'Titulo Especialidade'}/> 
         <Espec name={'Titulo Especialidade'}/> 
         <Espec name={'Titulo Especialidade'}/> 
