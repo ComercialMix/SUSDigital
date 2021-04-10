@@ -1,23 +1,33 @@
 import * as React from 'react';
 import { View, TextInput, Button, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-import Espec from './Especialidade'
+import Espec from './Especialidades'
 
 
 function HomeScreen({ navigation }) {
-    return (
-      <SafeAreaView style={styles.container}>
+  return (
+    <SafeAreaView style={styles.container}>
       <StatusBar
       animated={true}
       backgroundColor="#606060"/>
 
       <View style={styles.header}>
-        <View style={styles.sectionHeader}>
+        <View style={{flexDirection: 'row'}}>
           <TextInput style={styles.input}/>
-          <Button style={styles.button} color={'#0169B2'} title={'Entrar'} />
+          <Button color={'#0169B2'} title={'Entrar'} />
           <Button color={'#0169B2'} title={'Cadastre-se'} />
         </View>
+
       </View>
-          <Espec/>
+
+      <View style={styles.body}>
+        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'}/> 
+        <Espec name={'Titulo Especialidade'}/> 
+      </View>
+
     </SafeAreaView>
     );
   }
@@ -25,15 +35,16 @@ function HomeScreen({ navigation }) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
       justifyContent: 'flex-start',
+      backgroundColor: '#fff'
     },
     header: {
       backgroundColor: '#0169B2',
-      width: '100%',
       justifyContent: 'flex-start',
     },
-    sectionHeader: {
+    body: {
+      justifyContent: 'space-around', 
+      flexWrap: 'wrap',
       flexDirection: 'row',
     },
     input:{
@@ -41,7 +52,7 @@ function HomeScreen({ navigation }) {
       width: 200,
       margin: 10,
       borderRadius: 5,
-    }
+    },
   })    
   export default HomeScreen
   
